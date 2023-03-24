@@ -1,0 +1,172 @@
+.bannerInicio1{
+    background-image: url(../assets/bannerClientes.jpeg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 1800px;
+    h1{
+        font-size: 50px;
+        padding-top: 200px;
+        @include flex(flex, center, center);
+    }
+    h2{
+        font-size: 25px;
+        padding-top: 25px;
+        padding-bottom: 100px;
+        @include flex(flex, center, center)
+    }
+    .botonContainer1{
+        @include flex(flex, center, center);
+        padding-bottom: 70px;
+        a{
+        @include boton($color-boton, 10px, 50px, 50px, 21px, none, white, 5px);
+        &:hover{
+            @include botonHover(25px,black, 0.4s ease-in-out)
+        }
+        }
+}
+}
+
+.bannerInicio2{
+    @include flex(flex, space-around, center);
+    .nosotrosInicio1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h3{
+            font-size: 35px;
+            padding-bottom: 20px;
+        }
+        p{
+            font-size: 25px;
+        }
+        a{
+        @include boton($color-boton, 10px, 50px, 50px, 21px, none, white, 5px);
+        margin-top: 20px;
+            &:hover{
+                @include botonHover(25px, black, 0.4s ease-in-out)
+            }
+        }
+    }
+    .nosotrosInicioImg{
+        @include flex(block, flex-end, center);
+        img{
+            height: 500px;
+            padding: 20px;
+        }
+    }
+    }
+
+.lineInicio{
+    width: 100%;
+    height: 1px;
+    background-color: rgba(128, 128, 128, 0.192);
+    }
+
+.bannerInicio3{
+    h3{
+        padding-top: 140px;
+        padding-bottom: 100px;
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    .cardContainer{
+        @include flex(flex, center, center);
+        gap: 70px;
+        padding-bottom: 50px;
+        flex-wrap: wrap;
+        .card{
+            .cardImg{
+                width: 289px;
+                background-color: white;
+                box-shadow: 6px 4px 12px -3px rgba(94,94,94,0.87);
+                @include flex(flex, center, center);
+                z-index: 1;
+                img{
+                    height: 200px;
+                    z-index: 1;
+                }
+                &:hover{
+                    transform: translate(0px, -80px);
+                    box-shadow: 6px 4px 12px -3px rgba(140, 247, 255, 0.87);
+                    transition: 0.7s ease-in-out;
+                }
+            }
+            .cardContenido{
+                height: 120px;
+                display: flex;
+                justify-content: center;
+                z-index: -1;
+                position: relative;
+                top: -40px;
+                p{
+                    font-size: 24px;
+                    padding-top: 5px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .botonServicios{
+        @include flex(flex,center,center);
+        margin-bottom: 40px;
+        a{
+            @include boton($color-boton, 10px, 50px, 50px, 20px, none, white, 5px);
+            &:hover{
+                @include botonHover(25px, black, 0.4s ease-in-out)
+            }
+        }
+    }
+}
+
+.bannerInicio4{
+    .tituloBannerInicio4Container{
+        @include flex(flex, center, center);
+        text-align: center;
+        .tituloBannerInicio4{
+            h3{
+                font-size: 45px;
+                padding-top: 100px;
+            }
+            p{
+                font-size: 25px;
+                padding-top: 20px;
+                padding-bottom: 100px;
+            }
+        }
+    }
+    .edenorSurContainer{
+        @include flex(flex, center, center);
+        gap: 200px;
+        margin-bottom: 70px;
+        .edesur{
+            img{
+                height: 240px;
+                &:hover{
+                    height: 260px;
+                    transition: 0.4s ease-in-out;
+                }
+            }
+        }
+        .edenor{
+            img{
+                height: 80px;
+                &:hover{
+                    height: 90px;
+                    transition: 0.4s ease-in-out;
+                }
+            }
+        }
+    }
+    .botonEdenorSurContainer{
+    @include flex(flex,center,center);
+    margin-bottom: 50px;
+    .botonEdenorSur{
+        @include boton($color-boton, 10px, 50px, 50px, 20px, none, white, 5px);
+        &:hover{
+            @include botonHover(25px, black, 0.4s ease-in-out)
+        }
+        }
+    }
+}

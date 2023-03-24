@@ -1,0 +1,108 @@
+@media(max-width:320px){
+    .bannerInicio2{
+        .nosotrosInicio1{
+            h2{
+                font-size: 20px;
+                padding-bottom: 10px;
+            }
+            p{
+                font-size: 15px;
+            }
+            a{
+                font-size: 15px;
+                &:hover{
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+    .bannerInicio3{
+        .botonServicios{
+            a{
+                font-size: 15px;
+                &:hover{
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+
+    .bannerInicio4{
+        .tituloBannerInicio4Container{
+            .tituloBannerInicio4{
+                p{
+                    font-size: 15px;
+                }
+            }
+        }
+        .edenorSurContainer{
+            gap: 40px;
+            .edenor{
+                height: 20px;
+                img{
+                    &:hover{
+                        height: 25px;
+                    }
+                }
+            }
+            .edesur{
+                img{
+                    height: 75px;
+                    &:hover{
+                        height: 95px;
+                    }
+                }
+            }
+        }
+        .botonEdenorSur{
+            .botonEdenorSur{
+                font-size: 15px;
+                &:hover{
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+
+    .nosotrosBanner1{
+        .nosotrosBanner1Container{
+            padding-bottom: 130px;
+            padding-top: 130px;
+            p{
+                font-size: 16px;
+            }
+            h1{
+                font-size: 30px;
+            }
+        }
+    }
+    .serviciosBanner2{
+        .cardContainer2{
+            .card{
+                .cardContenido{
+                    p{
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+    .bannerClientes3{
+        .botonClientesContainer{
+            padding-bottom: 50px;
+            a{
+                font-size: 15px;
+                &:hover{
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+    .mainContactanos{
+        .formularioContainer{
+            form{
+                padding-right: 70px;
+            }
+        }
+    }
+}

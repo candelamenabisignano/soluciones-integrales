@@ -1,0 +1,306 @@
+@media(max-width: 680px){
+    header{
+        .hamburger{
+            display: block;
+            cursor: pointer;
+            padding-right: 10px;
+            .line{
+                width: 30px;
+                height: 3px;
+                background-color: rgb(0, 0, 0);
+                margin: 6px 0;
+            }
+        }
+        .navBar{
+            height: 0px;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            right: 0;
+            background-color: transparent;
+            backdrop-filter: blur(2px);
+            transition: 0.4s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center ;
+            overflow: hidden;
+            z-index: 1;
+            ul{
+                opacity: 0;
+                li{
+                    a{
+                        padding-left: 40px;
+                        align-items: center;
+                        flex-direction: column;
+                        font-size: 19px;
+                    }
+                }
+            }
+        }
+        .navBar.active{
+            height: 450px;
+            ul{
+                opacity: 1;
+            }
+        }
+        .logo{
+            a{
+                img{
+                    padding-top: 10px;
+                    height: 130px;
+                }
+            }
+        }
+}
+
+.bannerInicio1{
+    h1{
+        font-size: 37px;
+    }
+    h2{
+        font-size: 22px;
+        padding-bottom: 60px;
+    }
+}
+.bannerInicio2{
+    .nosotrosInicio1{
+        h3{
+            font-size: 26px;
+        }
+        p{
+            font-size: 18.5px;
+        }
+        a{
+            font-size: 18px;
+            padding: 5px;
+            padding-left: 30px;
+            padding-right: 30px;
+            &:hover{
+                font-size: 20px;
+            }
+        }
+    }
+    .nosotrosInicioImg img{
+        height: 250px;
+    }
+}
+.bannerInicio3{
+    h3{
+        font-size: 33px;
+    }
+    .cardContainer{
+        .card{
+            .cardImg{
+                width: 210px;
+                img{
+                    height: 150px;
+                }
+                .cardContenido{
+                    height: 110px;
+                    p{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .botonServicios{
+        a{
+            font-size: 18px;
+            &:hover{
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.bannerInicio4{
+    .tituloBannerInicio4Container{
+        .tituloBannerInicio4{
+            h3{
+                font-size: 35px;
+            }
+            p{
+                font-size: 22px;
+            }
+        }
+    }
+    .edenorSurContainer{
+        .edenor{
+            img{
+                height: 45.5px;
+                &:hover{
+                    height: 50px;
+                }
+            }
+        }
+        .edesur{
+            img{
+                height: 120px;
+                &:hover{
+                    height: 130px;
+                }
+            }
+        }
+    }
+}
+
+.nosotrosBanner1{
+    .nosotrosBanner1Container{
+        h1{
+            font-size: 33.5px;
+        }
+        p{
+            font-size: 20.5px;
+        }
+    }
+}
+.nosotrosBanner2{
+    .nosotrosContainer1{
+        .nosotrosContenido1{
+            p{
+                font-size: 20.5px;
+            }
+        }
+        .nosotrosImg img{
+            height: 270px;
+        }
+    }
+    .nosotrosContainer2{
+        .nosotrosContenido2{
+            p{
+                font-size: 20.5px;
+            }
+        }
+        .nosotrosImg img{
+            height: 270px;
+        }
+    }
+}
+.nosotrosBanner3{
+    .nosotrosBanner3Contenido{
+        h2{
+            font-size: 33px;
+
+        }
+        p{
+            font-size: 19px;
+        }
+        h3{
+            font-size: 22px;
+        }
+    }
+    .nosotrosBanner3Img{
+        img{
+            height: 270px;
+        }
+    }
+}
+
+.serviciosBanner1{
+    h1{
+        font-size: 27px;
+    }
+}
+.serviciosBanner2{
+    h2{
+        font-size: 35px;
+    }
+    .cardContainer2{
+        .card{
+            .cardImg{
+                width: 230px;
+                img{
+                    height: 190px;
+                }
+            }
+            .cardContenido{
+                height: 100px;
+                p{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+.bannerClientes1{
+    .bannerClientes1Contenido{
+        h1{
+            font-size: 27px;
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+    img{
+        height: 200px;
+    }
+}
+.bannerClientes2{
+    h2{
+        font-size: 31px;
+        padding-bottom: 30px;
+    }
+    .slider{
+        padding-bottom: 70px;
+        .slideTrack{
+            gap: 30px;
+            width: calc(100px * 18);
+        div{
+            a{
+                .slide{
+                    width: 100px;
+                    &:hover{
+                        width: 120px;
+                    }
+                }
+            }
+        }
+    }
+    }
+}
+.bannerClientes3{
+    .bannerClientes3Contenido{
+        padding-top: 100px;
+        h3{
+            font-size: 30px;
+        }
+        h4{
+            font-size: 20px;
+        }
+    }
+    .botonClientesContainer{
+        padding-bottom: 70px;
+        a{
+            font-size: 19px;
+            padding: 5px;
+            padding-left: 30px;
+            padding-right: 30px;
+            &:hover{
+                font-size: 21px;
+            }
+        }
+    }
+}
+
+.mainContactanos{
+    .tituloContactanos{
+        h1{
+            font-size: 25px;
+        }
+    }
+    .formularioContainer{
+        padding-top: 70px;
+        form{
+            padding-right: 200px;
+            div{
+                input{
+                    width: 200%;
+                }
+            }
+        }
+    }
+}
+}

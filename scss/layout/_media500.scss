@@ -1,0 +1,39 @@
+@media(max-width:500px){
+    .nosotrosBanner2{
+        .nosotrosContainer1{
+            .nosotrosContenido1{
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+        .nosotrosContainer2{
+            .nosotrosContenido2{
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .nosotrosBanner3{
+        .nosotrosBanner3Contenido{
+            h2{
+                font-size: 29px;
+            }
+            p{
+                font-size: 17px;
+            }
+        }
+        .nosotrosBanner3Img{
+            img{
+                height: 220px;
+            }
+        }
+    }
+
+    .serviciosBanner1{
+        h1{
+            font-size: 24px;
+        }
+    }
+}

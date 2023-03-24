@@ -1,0 +1,20 @@
+@mixin flex($display, $justify, $align){
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin boton($fondo-color, $padding,$left,$right,$font-size,$text-decoration,$color-font,$border-radius){
+    background-color: $fondo-color;
+    padding: $padding;
+    padding-left: $left;
+    padding-right: $right;
+    font-size: $font-size;
+    text-decoration: $text-decoration;
+    color: $color-font;
+    border-radius: $border-radius;
+}
+@mixin botonHover($font-size, $color-font, $transicion){
+    font-size: $font-size;
+    color: $color-font;
+    transition: $transicion;
+}

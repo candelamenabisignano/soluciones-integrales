@@ -1,0 +1,254 @@
+@media(max-width: 425px){
+    .bannerInicio1{
+        h1{
+            font-size: 32px;
+        }
+        h2{
+            font-size: 20px;
+            padding-bottom: 60px;
+        }
+        .botonContainer1{
+        a{
+            padding: 7px;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: 18px;
+            &:hover{
+                font-size: 20px;
+            }
+        }
+    }
+    }
+    .bannerInicio2{
+        .nosotrosInicio1{
+            h3{
+                font-size: 23px;
+            }
+            p{
+                font-size: 16px;
+            }
+            a{
+                font-size: 17px;
+                padding: 5px;
+                padding-left: 25px;
+                padding-right: 25px;
+                &:hover{
+                    font-size: 19px;
+                }
+            }
+        }
+        .nosotrosInicioImg img{
+            height: 240px;
+        }
+    }
+
+    .bannerInicio3{
+        h3{
+            font-size: 28px;
+            padding-top: 90px;
+        }
+        .cardContainer{
+            .card{
+                .cardImg{
+                    width: 180px;
+                    img{
+                        height: 130px;
+                    }
+                }
+                .cardContenido{
+                    height: 100px;
+                    p{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        .botonServicios{
+            a{
+                font-size: 17px;
+                padding: 7px;
+                padding-left: 25px;
+                padding-right: 25px;
+                &:hover{
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+
+    .bannerInicio4{
+        .tituloBannerInicio4Container{
+            .tituloBannerInicio4{
+                h3{
+                    padding-top: 80px;
+                    font-size: 30px;
+                }
+                p{
+                    font-size: 19px;
+                }
+            }
+        }
+        .edenorSurContainer{
+            gap: 100px;
+            .edenor{
+                img{
+                    height: 30px;
+                    &:hover{
+                        height: 35px;
+                    }
+                }
+            }
+            .edesur{
+                img{
+                    height: 100px;
+                    &:hover{
+                        height: 120px;
+                    }
+                }
+            }
+        }
+        .botonEdenorSurContainer{
+        .botonEdenorSur{
+            font-size: 18px;
+            padding: 7px;
+            padding-left: 25px;
+            padding-right: 25px;
+            &:hover{
+                font-size: 21px;
+            }
+        }
+    }
+    }
+
+    .nosotrosBanner1{
+        .nosotrosBanner1Container{
+            h1{
+                font-size: 33.5px;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+    }
+    .nosotrosBanner2{
+        .nosotrosContainer1{
+            .nosotrosContenido1{
+                p{
+                    font-size: 18px;
+                }
+            }
+            .nosotrosImg img{
+                height: 220px;
+            }
+        }
+        .nosotrosContainer2{
+            .nosotrosContenido2{
+                p{
+                    font-size: 18px;
+                }
+            }
+            .nosotrosImg img{
+                height: 220px;
+            }
+        }
+    }
+    .nosotrosBanner3{
+        .nosotrosBanner3Contenido{
+            padding-left: 10px;
+            h2{
+                font-size: 22px;
+            }
+            p{
+                font-size: 17px;
+            }
+            h3{
+                font-size: 20px;
+            }
+        }
+        .nosotrosBanner3Img{
+            img{
+                height: 200px;
+            }
+        }
+    }
+
+    .serviciosBanner1{
+        h1{
+            font-size: 23px;
+        }
+    }
+    .serviciosBanner2{
+        h2{
+            font-size: 30px;
+        }
+    }
+    .bannerClientes1{
+        .bannerClientes1Contenido{
+            h1{
+                font-size: 23px;
+            }
+            p{
+                font-size: 18px;
+            }
+        }
+        img{
+            height: 185px;
+        }
+    }
+    .bannerClientes2{
+        h2{
+            font-size: 26px;
+            padding-bottom: 20px;
+            padding-top: 50px;
+        }
+        .slider{
+            padding-bottom: 60px;
+            .slideTrack{
+                gap: 30px;
+                width: calc(80px * 18);
+            div{
+                a{
+                    .slide{
+                        width: 80px;
+                        &:hover{
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+        }
+    }
+    .bannerClientes3{
+        .bannerClientes3Contenido{
+            padding-top: 80px;
+            h3{
+                font-size: 26px;
+            }
+            h4{
+                font-size: 19px;
+            }
+        }
+        .botonClientesContainer{
+            a{
+                font-size: 18px;
+                &:hover{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .mainContactanos{
+        .formularioContainer{
+            form{
+                padding-right: 150px;
+                div{
+                    input{
+                        width: 155%;
+                    }
+                }
+            }
+        }
+    }
+}

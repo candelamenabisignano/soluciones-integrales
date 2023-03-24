@@ -1,0 +1,105 @@
+.bannerClientes1{
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    .bannerClientes1Contenido{
+        display: flex;
+        flex-direction: column;
+        h1{
+            font-size: 40px;
+            display: flex;
+            justify-content: 
+            flex-start;
+            padding-left: 20px;
+            padding-top: 70px;
+            padding-bottom: 40px;
+        }
+        p{
+            font-size: 25px;
+            display: flex;
+            padding-left: 20px;
+            padding-bottom: 20px;
+        }
+    }
+}
+
+.bannerClientes2{
+    background-image: url(../assets/clientesBanner1.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 1400px;
+    h2{
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .slider{
+        padding-top: 50px;
+        width: 90vw;
+        height: auto;
+        margin: auto;
+        overflow: hidden;
+        padding-bottom: 200px;
+        @keyframes scroll{
+            0%{
+                -webkit-transform: translateX(0);
+                transform: translateX(0)
+            }
+            100%{
+                -webkit-transform: translateX(calc(-150px * 9));
+                transform: translateX(-150px * 9);
+            }
+        }
+        .slideTrack{
+            display: flex;
+            animation: scroll 40s linear infinite;
+            width: calc(150px * 18);
+            -webkit-animation: scroll 40s linear infinite ;
+            align-items: center;
+            gap: 20px;
+        }
+        .slide{
+            width: 130px;
+            &:hover{
+                width: 150px;
+                transition: 0.4s ease-in-out;
+            }
+            img{
+                width: 100%;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.bannerClientes3{
+    background-image: url(../assets/clientesBanner2.jpg);
+    background-position: center;
+    background-size: 1700px;
+    .bannerClientes3Contenido{
+        color: white;
+        text-align: center;
+        padding-top: 170px;
+        h3{
+            font-size: 40px;
+        }
+        h4{
+            font-size: 25px;
+            padding-top: 20px;
+        }
+    }
+    .botonClientesContainer{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        padding-bottom: 100px;
+        a{
+            @include boton($color-boton, 10px,50px,50px,20px,none,white,5px);
+            &:hover{
+                @include botonHover(25px, black, 0.4s ease-in-out)
+            }
+        }
+    }
+}

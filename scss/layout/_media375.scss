@@ -1,0 +1,187 @@
+@media(max-width: 375px){
+    .bannerInicio2{
+        .nosotrosInicio1{
+            h3{
+                font-size: 20px;
+            }
+            p{
+                font-size: 15px;
+            }
+        }
+        .nosotrosInicioImg img{
+            height: 210px;
+        }
+    }
+    .bannerInicio4{
+        .tituloBannerInicio4Container{
+            .tituloBannerInicio4{
+                p{
+                    font-size: 17px;
+                }
+            }
+        }
+        .edenorSurContainer{
+            gap: 70px;
+            .edenor{
+                img{
+                    height: 25px;
+                    &:hover{
+                    height: 30px;
+                    }
+                }
+            }
+            .edesur{
+                img{
+                    height: 85px;
+                    &:hover{
+                    height: 105px;
+                    }
+                }
+            }
+        }
+    }
+
+    .nosotrosBanner1{
+        .nosotrosBanner1Container{
+            padding-bottom: 150px;
+            padding-top: 150px;
+            h1{
+                font-size: 33.5px;
+            }
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+    .nosotrosBanner2{
+        .nosotrosContainer1{
+            .nosotrosContenido1{
+                p{
+                    font-size: 16px;
+                }
+            }
+            .nosotrosImg img{
+                height: 200px;
+            }
+        }
+        .nosotrosContainer2{
+            .nosotrosContenido2{
+                p{
+                    font-size: 16px;
+                }
+            }
+            .nosotrosImg img{
+                height: 200px;
+            }
+        }
+    }
+    .nosotrosBanner3{
+        .nosotrosBanner3Contenido{
+            padding-left: 10px;
+            p{
+                font-size: 15px;
+            }
+        }
+        .nosotrosBanner3Img{
+            img{
+                height: 150px;
+            }
+        }
+    }
+
+    .serviciosBanner1{
+        h1{
+            font-size: 22px;
+        }
+    }
+    .serviciosBanner2{
+        .cardContainer2{
+            .card{
+                .cardImg{
+                    width: 200px;
+                    img{
+                        height: 150px;
+                    }
+                }
+                .cardContenido{
+                    height: 90px;
+                    p{
+                        font-size: 19px;
+                    }
+                }
+            }
+        }
+    }
+
+    .bannerClientes1{
+        .bannerClientes1Contenido{
+            h1{
+                font-size: 20px;
+            }
+            p{
+                font-size: 17px;
+            }
+        }
+        img{
+            height: 165px;
+        }
+    }
+    .bannerClientes2{
+        h2{
+            font-size: 26px;
+            padding-bottom: 20px;
+            padding-top: 50px;
+        }
+        .slider{
+            padding-bottom: 50px;
+            padding-top: 30px;
+            .slideTrack{
+                gap: 30px;
+                width: calc(70px * 18);
+            div{
+                a{
+                    .slide{
+                        width: 70px;
+                        &:hover{
+                            width: 90px;
+                        }
+                    }
+                }
+            }
+        }
+        }
+    }
+    .bannerClientes3{
+        .bannerClientes3Contenido{
+            padding-top: 60px;
+            h3{
+                font-size: 23px;
+            }
+            h4{
+                font-size: 18px;
+            }
+        }
+        .botonClientesContainer{
+            padding-bottom: 60px;
+            a{
+                font-size: 18px;
+                &:hover{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .mainContactanos{
+        .formularioContainer{
+            form{
+                padding-right: 100px;
+                div{
+                    input{
+                        width: 125%;
+                    }
+                }
+            }
+        }
+    }
+}
