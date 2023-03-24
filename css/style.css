@@ -65,7 +65,7 @@ footer {
     padding-right: 20px; }
 
 .bannerInicio1 {
-  background-image: url(../assets/bannerClientes.jpeg);
+  background-image: url(../assets/inicioBanner.jpeg);
   background-position: center;
   background-attachment: fixed;
   background-size: 1800px; }
@@ -367,7 +367,7 @@ footer {
     justify-content: center;
     z-index: -1;
     position: relative;
-    top: -115px; }
+    top: -135px; }
     .cardContainer2 .card .cardContenido p {
       font-size: 24.3px;
       padding-top: 5px;
