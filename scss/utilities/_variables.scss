@@ -1,2 +1,5 @@
 $color-header:#B5D0EE;
 $color-boton:rgba(138, 204, 221, 0.801);
+$transicion-hover-entrada-botones:.4s all cubic-bezier(.4,0,.2,1);
+$transicion-hover-salida-botones:.2s all cubic-bezier(.4,0,.2,1);
+$transicion-hover-cards:.3s cubic-bezier(.6,.4,0,1),transform .15s ease;

@@ -1,77 +1,97 @@
-.nosotrosBanner1{
-    background-image: url(../assets/nosotrosBanner1.jpg);
+.nosotros-banner-inicial{
+    //background: fixed url(../../assets/nosotros-banner-1.jpg);
+    background-image: url(../../assets/nosotros-banner-1.jpg) ;
     background-size: 1400px; 
     background-attachment: fixed;
-    .nosotrosBanner1Container{
-        padding-top: 200px;
-        padding-bottom: 200px;
-        color: white;
-        text-align: center;
+    .nosotros-banner-inicial-blur{
         backdrop-filter: blur(2px);
-        h1{
-            font-size: 40px;
-            padding-bottom: 30px;
-        }
-        p{
-            font-size: 25px;
+        background-color: rgba($color: #99e7f5, $alpha: 0.3);
+        padding:200px 0 200px 0;
+        @include flex(flex,center,center);
+        .nosotros-banner-inicial-container{
+            color: white;
+            text-align: center;
+            max-width: 500px;
+            h1{
+                font-size: 40px;
+                padding-bottom: 30px;
+            }
+            p{
+                font-weight: bold;
+                font-size: 25px;
+            }
         }
     }
 }
-.nosotrosBanner2{
-    .nosotrosContainer1{
-        @include flex(flex, space-around, center);
-    .nosotrosContenido1{
-        padding-top: 100px;
-        padding-left: 20px;
-        p{
-            font-size: 23px;
+.nosotros-info{
+    margin-bottom: 70px;
+    .nosotros-info-container-1-wrapper{
+        @include flex(flex, center,center);
+        .nosotros-info-container-1{
+            @include flex(flex,space-between, center);
+            width: 70%;
+            .nosotros-info-contenido-1{
+                padding-right: 50px;
+                margin-right: 50px;
+            p{
+                font-size: 24px;
+            }
+            };
+            & figure>img{
+                border-radius: 5px;
+                height: 600px;
+            }
         }
-        }
-    .nosotrosImg{
-        img{
-            height: 600px;
         }
     }
-    }
-    .nosotrosContainer2{
-        @include flex(flex, space-around, center);
-        flex-direction: row-reverse;
-    .nosotrosContenido2{
-        padding-right: 30px;
-        align-items: center;
-        p{
-        font-size: 23px;
-        text-align: right;
+    .nosotros-info-container-2-wrapper{
+        @include flex(flex, center,center);
+        .nosotros-info-container-2{
+            @include flex(flex, space-between, center);
+            width: 70%;
+            flex-direction: row-reverse;
+            .nosotros-info-contenido-2{
+                padding-left: 70px;
+                margin-left: 100px;
+                p{
+                font-size: 24px;
+                }
+            }
+        .nosotros-info-image-2{
+            figure>img{
+                border-radius: 5px;
+                height: 500px;
+            }
         }
         }
-    .nosotrosImg{
-        img{
-            height: 600px;
-        }
     }
-    }
-}
 
-.nosotrosBanner3{
+.nosotros-info-2{
     @include flex(flex, center, center);
-    padding-top: 50px;
-    padding-bottom: 50px;
-    .nosotrosBanner3Contenido{
+    padding: 50px 70px 50px 70px;
+    .nosotros-info-container-2{
+        @include flex(flex, center, center);
         padding-left: 10px;
-        h2{
-            font-size: 50px;
-            padding-bottom: 20px;
-        }
-        p{
-            font-size: 22px;
-        }
-        h3{
-            font-size: 27px;
-            padding-top: 30px;
-            color: #8ddcfc;
+        .nosotros-info-container-2-contenido{
+            width: 70%;
+            h2{
+                font-size: 40px;
+                padding-bottom: 20px;
+            }
+            p{
+                font-size: 22px;
+            }
+            h3{
+                font-size: 27px;
+                padding-top: 30px;
+                color: #48c8fa;
+            }
         }
     }
-    .nosotrosBanner3Img{
-        display: block;
+    .nosotros-image-container-2{
+        padding-right: 70px;
+        article>img{
+            height: 470px;
+        }
     }
 }

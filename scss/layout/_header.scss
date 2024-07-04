@@ -1,4 +1,4 @@
-header{
+.header-inicial{
     width: 100%;
     height: 100px;
     background-color: transparent;
@@ -9,13 +9,16 @@ header{
     z-index: 2;
     &.abajo{
         background-color: $color-header;
-        transition: 0.2s ease-in;
+        transition: $transicion-hover-salida-botones;
         .navBar{
-            ul{
+            ul{ 
+                display: flex;
                 li{
                     a{
                         color: white;
+                        transition: $transicion-hover-salida-botones;
                         &:hover{
+                            @include botonHover(1.1, white, $transicion-hover-entrada-botones);
                             color: black;
                         }
                     }
@@ -24,17 +27,37 @@ header{
         }
         .navBar.active{
             ul{
+                display: flex;
+                gap: 40px;
                 li{
                     a{
                         color: black;
+                        transition: $transicion-hover-salida-botones;
                         &:hover{
-                            color: grey;
+                            @include botonHover(1.1, white, $transicion-hover-entrada-botones)
                         }
                     }
                 }
             }
         }
     }
+
+        .navBar{
+            ul{ 
+                display: flex; 
+                gap: 40px;
+                li{
+                    a{
+                        color: white;
+                        transition: $transicion-hover-salida-botones;
+                        &:hover{
+                            @include botonHover(1.1, white, $transicion-hover-entrada-botones);
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
     .logo{
         a{
             img{
@@ -54,14 +77,13 @@ header{
             list-style: none;
             li{
                 a{
-                    display: block;
+                    display: inline-block;
                     color: black;
                     font-size: 22px;
                     text-decoration: none;
+                    transition: $transicion-hover-salida-botones;
                     &:hover{
-                        color: grey;
-                        font-size: 27px;
-                        transition: 0.6s ease-in;
+                        @include botonHover(1.1, white, $transicion-hover-entrada-botones)
                     }
                 }
             }

@@ -13,8 +13,8 @@
     color: $color-font;
     border-radius: $border-radius;
 }
-@mixin botonHover($font-size, $color-font, $transicion){
-    font-size: $font-size;
-    color: $color-font;
-    transition: $transicion;
+@mixin botonHover($scale-x,$text-color, $transition){
+    transform: scale($scale-x);
+    color: $text-color;
+    transition: $transition;
 }

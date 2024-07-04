@@ -1,66 +1,96 @@
-.serviciosBanner1{
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-image: url(../assets/serviciosBanner1.jpg);
-    background-position:top;
-    background-size: 1700px;
-    background-attachment: fixed;
-    @include flex(flex, center, center);
-    h1{
-        font-size: 35px;
-        text-align: center;
-        color: rgb(255, 255, 255);
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-}
 
-.serviciosBanner2{
-    h2{
-        font-size: 45px;
-        color: rgb(0, 0, 0);
-        display: flex;
-        justify-content: center;
-        padding-top: 100px;
-        padding-bottom: 150px;
-    }
-
-}
-.cardContainer2{
-    @include flex(flex, center, center);
-    gap: 70px;
-    padding-bottom: 50px;
-    flex-wrap: wrap;
-    .card{
-        .cardImg{
-            width: 289px;
-            border-radius: 7px;
-            background-color: white;
-            box-shadow: 6px 4px 12px -3px rgba(94,94,94,0.87);
-            @include flex(flex, center, center);
-            z-index: 1;
-            img{
-                height: 200px;
-                z-index: 1;
-            }
-            &:hover{
-                transform: translate(0px, -150px);
-                box-shadow: 6px 4px 12px -3px rgba(140, 247, 255, 0.87);
-                transition: 0.7s ease-in-out;
+    .servicios-banner-inicial{
+        .servicios-banner-inicial-blur{
+            backdrop-filter: blur(2px);
+            background-color: rgba($color: #99e7f5, $alpha: 0.3);
+            padding:200px 0 200px 0;
+            @include flex(flex,center,center);
+            .servicios-banner-inicial-container{
+                color: white;
+                text-align: center;
+                max-width: 500px;
+                h2{
+                    font-size: 40px;
+                    padding-bottom: 30px;
+                }
             }
         }
-        .cardContenido{
-            height: 120px;
+        h1{
+            font-size: 35px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+
+    .servicios-banner-cards{
+        margin-top: 500px;
+        h2{
+            font-size: 45px;
+            color: rgb(0, 0, 0);
             display: flex;
             justify-content: center;
-            z-index: -1;
-            position: relative;
-            top: -135px;
-            p{
-                font-size: 22px;
-                padding-top: 5px;
-                text-align: center;
-            }
+            padding-top: 100px;
+            padding-bottom: 150px;
         }
+
     }
-}
+        .servicios-banner-cards-container-cards{
+            @include flex(flex, center, center);
+            gap: 70px;
+            padding-bottom: 50px;
+            flex-wrap: wrap;
+            .inicio-servicios-card{
+                max-width: 300px;
+                background-color: #f7f7f8;
+                padding: 15px;
+                padding-block: 15px;
+                align-items: center;
+                overflow: hidden;
+                position: relative;
+                transition: $transicion-hover-cards;
+                border-radius: 5px;
+                box-shadow: 0 5px 15px 0 #00000026;
+                & > :not(strong){
+                    transition: $transicion-hover-cards;
+                };
+                strong{
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: var(--hover-text);
+                    border-radius: 5px;
+                    font-weight: bold;
+                    top: 100%;
+                    transition: all .3s cubic-bezier(.6,.4,0,1);
+                };
+                .card-image{
+                    width: 300px;
+                    transition: $transicion-hover-cards;
+                    background-color: #f7f7f8;
+                    @include flex(flex, center, center);
+                    img{
+                        height: 200px;
+                    }
+                };
+                &:hover .card-image{
+                    transition: $transicion-hover-cards;
+                    background-color: $color-boton;
+                    opacity: 0;
+                };
+                &:hover strong{
+                    top: 0;
+                    font-size: 25px;
+                    color: white;
+                };
+                &:hover{
+                    background-color: $color-boton;
+                    box-shadow: 0 5px 5px 0 #00000026;
+                };
+            };
+        }

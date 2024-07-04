@@ -1,131 +1,169 @@
-.bannerInicio1{
+.banner-inicial{
     background-image: url('../assets/inicio-banner.jpg');
     background-position: center;
     background-attachment: fixed;
     background-size: 1800px;
-    h1{
-        font-size: 50px;
-        padding-top: 200px;
-        @include flex(flex, center, center);
-    }
-    h2{
-        font-size: 25px;
-        padding-top: 25px;
-        padding-bottom: 100px;
-        @include flex(flex, center, center)
-    }
-    .botonContainer1{
-        @include flex(flex, center, center);
-        padding-bottom: 70px;
-        a{
-        @include boton($color-boton, 10px, 50px, 50px, 21px, none, white, 5px);
-        &:hover{
-            @include botonHover(25px,black, 0.4s ease-in-out)
+    height: 900px;
+    .banner-inicial-container{
+        display: flex; 
+        gap: 200px;
+        position: absolute; 
+        align-items: center;
+        top: 350px;
+        left: 300px;
+        .banner-inicial-header{
+            display: flex;
+            flex-direction: column;
+            h1{
+                font-size: 50px
+            };
+            p{
+                font-size: 30px
+            }
         }
-        }
-}
+        .anchor-banner-inicial-container{
+            @include flex(flex, center, center);
+            a{
+            @include boton($color-boton, 13px, 50px, 50px, 23px, none, white, 5px);
+            transition: $transicion-hover-salida-botones;
+            &:hover{
+                @include botonHover(1.1,black, $transicion-hover-entrada-botones);
+                
+            }
+            }
+    }
+    }
 }
 
-.bannerInicio2{
+.seccion-inicio-nosotros{
     @include flex(flex, space-around, center);
-    .nosotrosInicio1{
+    .nosotros-inicio-info{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        h3{
-            font-size: 35px;
-            padding-bottom: 20px;
-        }
-        p{
-            font-size: 25px;
-        }
-        a{
-        @include boton($color-boton, 10px, 50px, 50px, 21px, none, white, 5px);
-        margin-top: 20px;
-            &:hover{
-                @include botonHover(25px, black, 0.4s ease-in-out)
+        .nosotros-inicio-info-texto{
+            max-width: 400px;
+            h2{
+                font-size: 35px;
+                padding-bottom: 20px;
+            }
+            p{
+                font-size: 25px;
             }
         }
-    }
-    .nosotrosInicioImg{
+        .anchor-container-inicio-nosotros{
+            display: inline-block;
+            max-width: 250px;
+            a{
+                @include boton($color-boton, 10px, 50px, 50px, 21px, none, white, 5px);
+                display: inline-block;
+                margin-top: 20px;
+                transition: $transicion-hover-salida-botones;
+                    &:hover{
+                        @include botonHover(1.1,black, $transicion-hover-entrada-botones)
+                    }
+                }
+            }
+        }
+    .nosotros-inicio-info-img{
         @include flex(block, flex-end, center);
         img{
             height: 500px;
             padding: 20px;
         }
     }
-    }
+}
 
-.lineInicio{
-    width: 100%;
-    height: 1px;
-    background-color: rgba(128, 128, 128, 0.192);
-    }
-
-.bannerInicio3{
-    h3{
+.seccion-inicio-servicios{
+    margin-bottom: 100px;
+    h2{
         padding-top: 140px;
         padding-bottom: 100px;
         font-size: 50px;
         display: flex;
         justify-content: center;
-    }
-    .cardContainer{
+    };
+    .inicio-servicios-card-container{
         @include flex(flex, center, center);
         gap: 70px;
         padding-bottom: 50px;
         flex-wrap: wrap;
-        .card{
-            .cardImg{
-                width: 289px;
-                background-color: white;
-                box-shadow: 6px 4px 12px -3px rgba(94,94,94,0.87);
-                @include flex(flex, center, center);
-                z-index: 1;
-                img{
-                    height: 200px;
-                    z-index: 1;
-                }
-                &:hover{
-                    transform: translate(0px, -80px);
-                    box-shadow: 6px 4px 12px -3px rgba(140, 247, 255, 0.87);
-                    transition: 0.7s ease-in-out;
-                }
-            }
-            .cardContenido{
-                height: 120px;
+        .inicio-servicios-card{
+            max-width: 300px;
+            background-color: #f7f7f8;
+            padding: 15px;
+            padding-block: 15px;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            transition: $transicion-hover-cards;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px 0 #00000026;
+            & > :not(strong){
+                transition: $transicion-hover-cards;
+            };
+            strong{
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
                 display: flex;
                 justify-content: center;
-                z-index: -1;
-                position: relative;
-                top: -40px;
-                p{
-                    font-size: 24px;
-                    padding-top: 5px;
-                    text-align: center;
+                align-items: center;
+                color: var(--hover-text);
+                border-radius: 5px;
+                font-weight: bold;
+                top: 100%;
+                transition: all .3s cubic-bezier(.6,.4,0,1);
+            };
+            .card-image{
+                width: 300px;
+                transition: $transicion-hover-cards;
+                background-color: #f7f7f8;
+                @include flex(flex, center, center);
+                img{
+                    height: 200px;
                 }
-            }
-        }
-    }
-    .botonServicios{
+            };
+            &:hover .card-image{
+                transition: $transicion-hover-cards;
+                background-color: $color-boton;
+                opacity: 0;
+            };
+            &:hover strong{
+                top: 0;
+                font-size: 25px;
+                color: white;
+            };
+            &:hover{
+                background-color: $color-boton;
+                box-shadow: 0 5px 5px 0 #00000026;
+            };
+        };
+    };
+    .inicio-servicios-anchor-container{
         @include flex(flex,center,center);
         margin-bottom: 40px;
         a{
-            @include boton($color-boton, 10px, 50px, 50px, 20px, none, white, 5px);
+            @include boton($color-boton, 13px, 50px, 50px, 23px, none, white, 5px);
+            transition: $transicion-hover-salida-botones;
             &:hover{
-                @include botonHover(25px, black, 0.4s ease-in-out)
-            }
-        }
-    }
-}
+                @include botonHover(1.1,black, $transicion-hover-entrada-botones);
+                
+            };
+        };
+    };
+};
 
-.bannerInicio4{
-    .tituloBannerInicio4Container{
+.seccion-inicio-clientes{
+    margin-top: 50px;
+    @include flex(flex,center,center);
+    flex-direction: column;
+    .inicio-clientes-header{
         @include flex(flex, center, center);
+        flex-direction: column;
         text-align: center;
-        .tituloBannerInicio4{
-            h3{
+            h2{
                 font-size: 45px;
                 padding-top: 100px;
             }
@@ -134,39 +172,42 @@
                 padding-top: 20px;
                 padding-bottom: 100px;
             }
-        }
     }
-    .edenorSurContainer{
+    .inicio-clientes-images{
         @include flex(flex, center, center);
-        gap: 200px;
+        max-width: 850px;
+        padding: 0 50px 0 50px;
+        gap: 80px;
         margin-bottom: 70px;
-        .edesur{
+        overflow: hidden;
+        a{
+        figure{
+            img[alt~='edenor']{
+                height: 80px
+            };
+            img[alt~='edesur']{
+                height: 255px;
+            };
             img{
-                height: 240px;
+                transition: $transicion-hover-salida-botones;
                 &:hover{
-                    height: 260px;
-                    transition: 0.4s ease-in-out;
+                    transition: $transicion-hover-entrada-botones;
+                    transform: scale(1.1);
                 }
-            }
-        }
-        .edenor{
-            img{
-                height: 80px;
-                &:hover{
-                    height: 90px;
-                    transition: 0.4s ease-in-out;
-                }
-            }
+            };
+        };
         }
     }
-    .botonEdenorSurContainer{
+    .inicio-clientes-button{
     @include flex(flex,center,center);
     margin-bottom: 50px;
-    .botonEdenorSur{
-        @include boton($color-boton, 10px, 50px, 50px, 20px, none, white, 5px);
-        &:hover{
-            @include botonHover(25px, black, 0.4s ease-in-out)
-        }
-        }
+    a{
+            @include boton($color-boton, 13px, 50px, 50px, 23px, none, white, 5px);
+            transition: $transicion-hover-salida-botones;
+            &:hover{
+                @include botonHover(1.1,black, $transicion-hover-entrada-botones);
+                
+            };
+        };
     }
 }

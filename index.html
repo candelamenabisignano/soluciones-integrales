@@ -10,7 +10,7 @@
     />
     <meta
       name="keywords"
-      content="consultora, higiene y seguridad, seguridad e higiene, electricista"
+      content="consultora, higiene y seguridad, seguridad e higiene, electricista, consultora en higiene y seguridad"
     />
     <meta name="author" content="Candela Mena Bisignano" />
     <meta name="copyright" content="soluciones-integrales" />
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header>
+    <header class="header-inicial">
       <div class="logo">
         <a href="./index.html">
           <img
@@ -39,32 +39,24 @@
         </a>
       </div>
       <div class="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
       </div>
       <nav class="navBar">
         <ul>
           <li>
-            <a href="./index.html" class="active">inicio</a>
+            <a href="./index.html">inicio</a>
           </li>
-        </ul>
-        <ul>
           <li>
             <a href="./pages/nosotros.html">nosotros</a>
           </li>
-        </ul>
-        <ul>
           <li>
             <a href="./pages/servicios.html">servicios</a>
           </li>
-        </ul>
-        <ul>
           <li>
             <a href="./pages/clientes.html">clientes</a>
           </li>
-        </ul>
-        <ul>
           <li>
             <a href="pages/contactanos.html">contactanos</a>
           </li>
@@ -72,101 +64,101 @@
       </nav>
     </header>
     <main>
-      <section class="bannerInicio1">
-        <h1>soluciones integrales</h1>
-        <h2>tu consultora de confianza.</h2>
-        <div class="botonContainer1">
-          <a href="./pages/contactanos.html">contactanos</a>
+      <section class="banner-inicial">
+        <div class="banner-inicial-container">
+          <header class="banner-inicial-header">
+            <h1>soluciones integrales</h1>
+            <p>tu consultora de confianza.</p>
+          </header>
+
+          <div class="anchor-banner-inicial-container">
+            <a href="./pages/contactanos.html">contactanos</a>
+          </div>
         </div>
       </section>
-      <section class="bannerInicio2">
-        <div class="nosotrosInicio1">
-          <h3>sobre nosotros</h3>
-          <p>
-            somos una consultora con muchos <br />
-            años de trayectoria en el rubro <br />
-            electrico y en grandes industrias, <br />
-            actualmente en busqueda de <br />
-            expansion, ingresando al mercado <br />
-            un servicio de calidad, adaptado <br />
-            a cada empresa
-          </p>
-          <a href="./pages/nosotros.html">conoce mas</a>
+      <section class="seccion-inicio-nosotros">
+        <div class="nosotros-inicio-info">
+          <div class="nosotros-inicio-info-texto">
+            <h2>sobre nosotros</h2>
+            <p>
+              Somos una consultora con muchos años de trayectoria en el rubro
+              eléctrico y en grandes industrias, actualmente en búsqueda de
+              expansión, ingresando al mercado con un servicio de calidad,
+              adaptado a cada empresa.
+            </p>
+          </div>
+          <div class="anchor-container-inicio-nosotros">
+            <a href="./pages/nosotros.html">conoce mas</a>
+          </div>
         </div>
-        <div class="nosotrosInicioImg">
+        <div class="nosotros-inicio-info-img">
           <img
             src="./assets/nosotros-inicio.jpg"
-            alt="hombre con gorro de ingeniero y lentes"
+            alt="hombre ingeniero con casco de seguridad y lentes"
           />
         </div>
       </section>
-      <hr>
-      <section class="bannerInicio3">
-        <h3>servicios</h3>
-        <div class="cardContainer">
-          <div class="card">
-            <div class="cardImg">
+      <hr />
+      <section class="seccion-inicio-servicios">
+        <h2>servicios</h2>
+        <div class="inicio-servicios-card-container">
+          <article class="inicio-servicios-card">
+            <figure class="card-image">
               <img src="./assets/covid-card.webp" alt="persona con tapabocas" />
-            </div>
-            <div class="cardContenido">
-              <p>protocolo covid</p>
-            </div>
-          </div>
+            </figure>
+            <strong>protocolo covid</strong>
+          </article>
 
-          <div class="card">
-            <div class="cardImg">
+          <article class="inicio-servicios-card">
+            <figure class="card-image">
               <img
                 src="./assets/ambiente-card.webp"
                 alt="persona sentada en un mundo con una laptop"
               />
-            </div>
-            <div class="cardContenido">
-              <p>impacto ambiental</p>
-            </div>
-          </div>
+            </figure>
+            <strong>impacto ambiental</strong>
+          </article>
 
-          <div class="card">
-            <div class="cardImg">
-              <img src="./assets/legajo-card.webp" alt="persona haciendo planos" />
-            </div>
-            <div class="cardContenido">
-              <p>legajos tecnicos</p>
-            </div>
-          </div>
+          <article class="inicio-servicios-card">
+            <figure class="card-image">
+              <img
+                src="./assets/legajo-card.webp"
+                alt="persona haciendo planos"
+              />
+            </figure>
+            <strong>legajos tecnicos</strong>
+          </article>
         </div>
-        <div class="botonServicios">
+        <div class="inicio-servicios-anchor-container">
           <a href="./pages/servicios.html">conoce mas</a>
         </div>
       </section>
-      <div class="lineInicio"></div>
-      <section class="bannerInicio4">
-        <div class="tituloBannerInicio4Container">
-          <div class="tituloBannerInicio4">
-            <h3>clientes</h3>
-            <p>trabajamos con grandes empresas en el rubro como:</p>
-          </div>
-        </div>
-
-        <div class="edenorSurContainer">
-          <div class="edenor">
-            <a href="https://www.edenor.com/">
+      <hr />
+      <section class="seccion-inicio-clientes">
+        <header class="inicio-clientes-header">
+          <h2>clientes</h2>
+          <p>trabajamos con grandes empresas en el rubro como:</p>
+        </header>
+        <div class="inicio-clientes-images">
+          <a href="https://www.edenor.com/">
+            <figure>
               <img
                 src="./assets/edenor-logo.jpg"
                 alt="logo edenor con dos particulas verdes y azules arriba de la ultima letra"
               />
-            </a>
-          </div>
-          <div class="edesur">
-            <a href="https://www.edesur.com.ar/">
+            </figure>
+          </a>
+          <a href="https://www.edesur.com.ar/">
+            <figure>
               <img
                 src="./assets/edesur-logo.jpg"
                 alt="logo edesur con un cuadrado con los colores azul y amarillo al principio del logo"
               />
-            </a>
-          </div>
+            </figure>
+          </a>
         </div>
-        <div class="botonEdenorSurContainer">
-          <a href="./pages/clientes.html" class="botonEdenorSur">conoce mas</a>
+        <div class="inicio-clientes-button">
+          <a href="./pages/clientes.html">conoce mas</a>
         </div>
       </section>
     </main>

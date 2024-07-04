@@ -3,10 +3,13 @@
   padding: 0;
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-family: 'Switzer', sans-serif; }
 
-header {
+.header-inicial {
   width: 100%;
   height: 100px;
   background-color: transparent;
@@ -15,37 +18,61 @@ header {
   justify-content: space-between;
   position: fixed;
   z-index: 2; }
-  header.abajo {
+  .header-inicial.abajo {
     background-color: #B5D0EE;
-    transition: 0.2s ease-in; }
-    header.abajo .navBar ul li a {
-      color: white; }
-      header.abajo .navBar ul li a:hover {
+    transition: 0.2s all cubic-bezier(0.4, 0, 0.2, 1); }
+    .header-inicial.abajo .navBar ul {
+      display: flex; }
+      .header-inicial.abajo .navBar ul li a {
+        color: white;
+        transition: 0.2s all cubic-bezier(0.4, 0, 0.2, 1); }
+        .header-inicial.abajo .navBar ul li a:hover {
+          transform: scale(1.1);
+          color: white;
+          transition: 0.4s all cubic-bezier(0.4, 0, 0.2, 1);
+          color: black; }
+    .header-inicial.abajo .navBar.active ul {
+      display: flex;
+      gap: 40px; }
+      .header-inicial.abajo .navBar.active ul li a {
+        color: black;
+        transition: 0.2s all cubic-bezier(0.4, 0, 0.2, 1); }
+        .header-inicial.abajo .navBar.active ul li a:hover {
+          transform: scale(1.1);
+          color: white;
+          transition: 0.4s all cubic-bezier(0.4, 0, 0.2, 1); }
+  .header-inicial .navBar ul {
+    display: flex;
+    gap: 40px; }
+    .header-inicial .navBar ul li a {
+      color: white;
+      transition: 0.2s all cubic-bezier(0.4, 0, 0.2, 1); }
+      .header-inicial .navBar ul li a:hover {
+        transform: scale(1.1);
+        color: white;
+        transition: 0.4s all cubic-bezier(0.4, 0, 0.2, 1);
         color: black; }
-    header.abajo .navBar.active ul li a {
-      color: black; }
-      header.abajo .navBar.active ul li a:hover {
-        color: grey; }
-  header .logo a img {
+  .header-inicial .logo a img {
     padding-top: 10px;
     height: 160px; }
-  header .hamburger {
+  .header-inicial .hamburger {
     display: none; }
-  header .navBar {
+  .header-inicial .navBar {
     gap: 50px;
     padding-right: 20px;
     display: flex; }
-    header .navBar ul {
+    .header-inicial .navBar ul {
       list-style: none; }
-      header .navBar ul li a {
-        display: block;
+      .header-inicial .navBar ul li a {
+        display: inline-block;
         color: black;
         font-size: 22px;
-        text-decoration: none; }
-        header .navBar ul li a:hover {
-          color: grey;
-          font-size: 27px;
-          transition: 0.6s ease-in; }
+        text-decoration: none;
+        transition: 0.2s all cubic-bezier(0.4, 0, 0.2, 1); }
+        .header-inicial .navBar ul li a:hover {
+          transform: scale(1.1);
+          color: white;
+          transition: 0.4s all cubic-bezier(0.4, 0, 0.2, 1); }
 
 footer {
   background-color: #d8f4fc;
@@ -64,314 +91,397 @@ footer {
     height: 35px;
     padding-right: 20px; }
 
-.bannerInicio1 {
+.banner-inicial {
   background-image: url("../assets/inicio-banner.jpg");
   background-position: center;
   background-attachment: fixed;
-  background-size: 1800px; }
-  .bannerInicio1 h1 {
-    font-size: 50px;
-    padding-top: 200px;
+  background-size: 1800px;
+  height: 900px; }
+  .banner-inicial .banner-inicial-container {
     display: flex;
-    justify-content: center;
-    align-items: center; }
-  .bannerInicio1 h2 {
-    font-size: 25px;
-    padding-top: 25px;
-    padding-bottom: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .bannerInicio1 .botonContainer1 {
-    display: flex;
-    justify-content: center;
+    gap: 200px;
+    position: absolute;
     align-items: center;
-    padding-bottom: 70px; }
-    .bannerInicio1 .botonContainer1 a {
-      background-color: rgba(138, 204, 221, 0.801);
-      padding: 10px;
-      padding-left: 50px;
-      padding-right: 50px;
-      font-size: 21px;
-      text-decoration: none;
-      color: white;
-      border-radius: 5px; }
-      .bannerInicio1 .botonContainer1 a:hover {
-        font-size: 25px;
-        color: black;
-        transition: 0.4s ease-in-out; }
+    top: 350px;
+    left: 300px; }
+    .banner-inicial .banner-inicial-container .banner-inicial-header {
+      display: flex;
+      flex-direction: column; }
+      .banner-inicial .banner-inicial-container .banner-inicial-header h1 {
+        font-size: 50px; }
+      .banner-inicial .banner-inicial-container .banner-inicial-header p {
+        font-size: 30px; }
+    .banner-inicial .banner-inicial-container .anchor-banner-inicial-container {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .banner-inicial .banner-inicial-container .anchor-banner-inicial-container a {
+        background-color: rgba(138, 204, 221, 0.801);
+        padding: 13px;
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 23px;
+        text-decoration: none;
+        color: white;
+        border-radius: 5px;
+        transition: 0.2s all cubic-bezier(0.4, 0, 0.2, 1); }
+        .banner-inicial .banner-inicial-container .anchor-banner-inicial-container a:hover {
+          transform: scale(1.1);
+          color: black;
+          transition: 0.4s all cubic-bezier(0.4, 0, 0.2, 1); }
 
-.bannerInicio2 {
+.seccion-inicio-nosotros {
   display: flex;
   justify-content: space-around;
   align-items: center; }
-  .bannerInicio2 .nosotrosInicio1 {
+  .seccion-inicio-nosotros .nosotros-inicio-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    .bannerInicio2 .nosotrosInicio1 h3 {
-      font-size: 35px;
-      padding-bottom: 20px; }
-    .bannerInicio2 .nosotrosInicio1 p {
-      font-size: 25px; }
-    .bannerInicio2 .nosotrosInicio1 a {
-      background-color: rgba(138, 204, 221, 0.801);
-      padding: 10px;
-      padding-left: 50px;
-      padding-right: 50px;
-      font-size: 21px;
-      text-decoration: none;
-      color: white;
-      border-radius: 5px;
-      margin-top: 20px; }
-      .bannerInicio2 .nosotrosInicio1 a:hover {
-        font-size: 25px;
-        color: black;
-        transition: 0.4s ease-in-out; }
-  .bannerInicio2 .nosotrosInicioImg {
+    justify-content: center; }
+    .seccion-inicio-nosotros .nosotros-inicio-info .nosotros-inicio-info-texto {
+      max-width: 400px; }
+      .seccion-inicio-nosotros .nosotros-inicio-info .nosotros-inicio-info-texto h2 {
+        font-size: 35px;
+        padding-bottom: 20px; }
+      .seccion-inicio-nosotros .nosotros-inicio-info .nosotros-inicio-info-texto p {
+        font-size: 25px; }
+    .seccion-inicio-nosotros .nosotros-inicio-info .anchor-container-inicio-nosotros {
+      display: inline-block;
+      max-width: 250px; }
+      .seccion-inicio-nosotros .nosotros-inicio-info .anchor-container-inicio-nosotros a {
+        background-color: rgba(138, 204, 221, 0.801);
+        padding: 10px;
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 21px;
+        text-decoration: none;
+        color: white;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 20px;
+        transition: 0.2s all cubic-bezier(0.4, 0, 0.2, 1); }
+        .seccion-inicio-nosotros .nosotros-inicio-info .anchor-container-inicio-nosotros a:hover {
+          transform: scale(1.1);
+          color: black;
+          transition: 0.4s all cubic-bezier(0.4, 0, 0.2, 1); }
+  .seccion-inicio-nosotros .nosotros-inicio-info-img {
     display: block;
     justify-content: flex-end;
     align-items: center; }
-    .bannerInicio2 .nosotrosInicioImg img {
+    .seccion-inicio-nosotros .nosotros-inicio-info-img img {
       height: 500px;
       padding: 20px; }
 
-.lineInicio {
-  width: 100%;
-  height: 1px;
-  background-color: rgba(128, 128, 128, 0.192); }
-
-.bannerInicio3 h3 {
-  padding-top: 140px;
-  padding-bottom: 100px;
-  font-size: 50px;
-  display: flex;
-  justify-content: center; }
-
-.bannerInicio3 .cardContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 70px;
-  padding-bottom: 50px;
-  flex-wrap: wrap; }
-  .bannerInicio3 .cardContainer .card .cardImg {
-    width: 289px;
-    background-color: white;
-    box-shadow: 6px 4px 12px -3px rgba(94, 94, 94, 0.87);
+.seccion-inicio-servicios {
+  margin-bottom: 100px; }
+  .seccion-inicio-servicios h2 {
+    padding-top: 140px;
+    padding-bottom: 100px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center; }
+  .seccion-inicio-servicios .inicio-servicios-card-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1; }
-    .bannerInicio3 .cardContainer .card .cardImg img {
-      height: 200px;
-      z-index: 1; }
-    .bannerInicio3 .cardContainer .card .cardImg:hover {
-      transform: translate(0px, -80px);
-      box-shadow: 6px 4px 12px -3px rgba(140, 247, 255, 0.87);
-      transition: 0.7s ease-in-out; }
-  .bannerInicio3 .cardContainer .card .cardContenido {
-    height: 120px;
+    gap: 70px;
+    padding-bottom: 50px;
+    flex-wrap: wrap; }
+    .seccion-inicio-servicios .inicio-servicios-card-container .inicio-servicios-card {
+      max-width: 300px;
+      background-color: #f7f7f8;
+      padding: 15px;
+      padding-block: 15px;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
+      border-radius: 5px;
+      box-shadow: 0 5px 15px 0 #00000026; }
+      .seccion-inicio-servicios .inicio-servicios-card-container .inicio-servicios-card > :not(strong) {
+        transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease; }
+      .seccion-inicio-servicios .inicio-servicios-card-container .inicio-servicios-card strong {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--hover-text);
+        border-radius: 5px;
+        font-weight: bold;
+        top: 100%;
+        transition: all 0.3s cubic-bezier(0.6, 0.4, 0, 1); }
+      .seccion-inicio-servicios .inicio-servicios-card-container .inicio-servicios-card .card-image {
+        width: 300px;
+        transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
+        background-color: #f7f7f8;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .seccion-inicio-servicios .inicio-servicios-card-container .inicio-servicios-card .card-image img {
+          height: 200px; }
+      .seccion-inicio-servicios .inicio-servicios-card-container .inicio-servicios-card:hover .card-image {
+        transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
+        background-color: rgba(138, 204, 221, 0.801);
+        opacity: 0; }
+      .seccion-inicio-servicios .inicio-servicios-card-container .inicio-servicios-card:hover strong {
+        top: 0;
+        font-size: 25px;
+        color: white; }
+      .seccion-inicio-servicios .inicio-servicios-card-container .inicio-servicios-card:hover {
+        background-color: rgba(138, 204, 221, 0.801);
+        box-shadow: 0 5px 5px 0 #00000026; }
+  .seccion-inicio-servicios .inicio-servicios-anchor-container {
     display: flex;
     justify-content: center;
-    z-index: -1;
-    position: relative;
-    top: -40px; }
-    .bannerInicio3 .cardContainer .card .cardContenido p {
-      font-size: 24px;
-      padding-top: 5px;
-      text-align: center; }
+    align-items: center;
+    margin-bottom: 40px; }
+    .seccion-inicio-servicios .inicio-servicios-anchor-container a {
+      background-color: rgba(138, 204, 221, 0.801);
+      padding: 13px;
+      padding-left: 50px;
+      padding-right: 50px;
+      font-size: 23px;
+      text-decoration: none;
+      color: white;
+      border-radius: 5px;
+      transition: 0.2s all cubic-bezier(0.4, 0, 0.2, 1); }
+      .seccion-inicio-servicios .inicio-servicios-anchor-container a:hover {
+        transform: scale(1.1);
+        color: black;
+        transition: 0.4s all cubic-bezier(0.4, 0, 0.2, 1); }
 
-.bannerInicio3 .botonServicios {
+.seccion-inicio-clientes {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px; }
-  .bannerInicio3 .botonServicios a {
-    background-color: rgba(138, 204, 221, 0.801);
-    padding: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-    border-radius: 5px; }
-    .bannerInicio3 .botonServicios a:hover {
+  flex-direction: column; }
+  .seccion-inicio-clientes .inicio-clientes-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center; }
+    .seccion-inicio-clientes .inicio-clientes-header h2 {
+      font-size: 45px;
+      padding-top: 100px; }
+    .seccion-inicio-clientes .inicio-clientes-header p {
       font-size: 25px;
-      color: black;
-      transition: 0.4s ease-in-out; }
+      padding-top: 20px;
+      padding-bottom: 100px; }
+  .seccion-inicio-clientes .inicio-clientes-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 850px;
+    padding: 0 50px 0 50px;
+    gap: 80px;
+    margin-bottom: 70px;
+    overflow: hidden; }
+    .seccion-inicio-clientes .inicio-clientes-images a figure img[alt~='edenor'] {
+      height: 80px; }
+    .seccion-inicio-clientes .inicio-clientes-images a figure img[alt~='edesur'] {
+      height: 255px; }
+    .seccion-inicio-clientes .inicio-clientes-images a figure img {
+      transition: 0.2s all cubic-bezier(0.4, 0, 0.2, 1); }
+      .seccion-inicio-clientes .inicio-clientes-images a figure img:hover {
+        transition: 0.4s all cubic-bezier(0.4, 0, 0.2, 1);
+        transform: scale(1.1); }
+  .seccion-inicio-clientes .inicio-clientes-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px; }
+    .seccion-inicio-clientes .inicio-clientes-button a {
+      background-color: rgba(138, 204, 221, 0.801);
+      padding: 13px;
+      padding-left: 50px;
+      padding-right: 50px;
+      font-size: 23px;
+      text-decoration: none;
+      color: white;
+      border-radius: 5px;
+      transition: 0.2s all cubic-bezier(0.4, 0, 0.2, 1); }
+      .seccion-inicio-clientes .inicio-clientes-button a:hover {
+        transform: scale(1.1);
+        color: black;
+        transition: 0.4s all cubic-bezier(0.4, 0, 0.2, 1); }
 
-.bannerInicio4 .tituloBannerInicio4Container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center; }
-  .bannerInicio4 .tituloBannerInicio4Container .tituloBannerInicio4 h3 {
-    font-size: 45px;
-    padding-top: 100px; }
-  .bannerInicio4 .tituloBannerInicio4Container .tituloBannerInicio4 p {
-    font-size: 25px;
-    padding-top: 20px;
-    padding-bottom: 100px; }
-
-.bannerInicio4 .edenorSurContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 200px;
-  margin-bottom: 70px; }
-  .bannerInicio4 .edenorSurContainer .edesur img {
-    height: 240px; }
-    .bannerInicio4 .edenorSurContainer .edesur img:hover {
-      height: 260px;
-      transition: 0.4s ease-in-out; }
-  .bannerInicio4 .edenorSurContainer .edenor img {
-    height: 80px; }
-    .bannerInicio4 .edenorSurContainer .edenor img:hover {
-      height: 90px;
-      transition: 0.4s ease-in-out; }
-
-.bannerInicio4 .botonEdenorSurContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px; }
-  .bannerInicio4 .botonEdenorSurContainer .botonEdenorSur {
-    background-color: rgba(138, 204, 221, 0.801);
-    padding: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-    border-radius: 5px; }
-    .bannerInicio4 .botonEdenorSurContainer .botonEdenorSur:hover {
-      font-size: 25px;
-      color: black;
-      transition: 0.4s ease-in-out; }
-
-.nosotrosBanner1 {
-  background-image: url(../assets/nosotrosBanner1.jpg);
+.nosotros-banner-inicial {
+  background-image: url(../../assets/nosotros-banner-1.jpg);
   background-size: 1400px;
   background-attachment: fixed; }
-  .nosotrosBanner1 .nosotrosBanner1Container {
-    padding-top: 200px;
-    padding-bottom: 200px;
+  .nosotros-banner-inicial .nosotros-banner-inicial-blur {
+    backdrop-filter: blur(2px);
+    background-color: rgba(153, 231, 245, 0.3);
+    padding: 200px 0 200px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .nosotros-banner-inicial .nosotros-banner-inicial-blur .nosotros-banner-inicial-container {
+      color: white;
+      text-align: center;
+      max-width: 500px; }
+      .nosotros-banner-inicial .nosotros-banner-inicial-blur .nosotros-banner-inicial-container h1 {
+        font-size: 40px;
+        padding-bottom: 30px; }
+      .nosotros-banner-inicial .nosotros-banner-inicial-blur .nosotros-banner-inicial-container p {
+        font-weight: bold;
+        font-size: 25px; }
+
+.nosotros-info {
+  margin-bottom: 70px; }
+  .nosotros-info .nosotros-info-container-1-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .nosotros-info .nosotros-info-container-1-wrapper .nosotros-info-container-1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 70%; }
+      .nosotros-info .nosotros-info-container-1-wrapper .nosotros-info-container-1 .nosotros-info-contenido-1 {
+        padding-right: 50px;
+        margin-right: 50px; }
+        .nosotros-info .nosotros-info-container-1-wrapper .nosotros-info-container-1 .nosotros-info-contenido-1 p {
+          font-size: 24px; }
+      .nosotros-info .nosotros-info-container-1-wrapper .nosotros-info-container-1 figure > img {
+        border-radius: 5px;
+        height: 600px; }
+
+.nosotros-info-container-2-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .nosotros-info-container-2-wrapper .nosotros-info-container-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    flex-direction: row-reverse; }
+    .nosotros-info-container-2-wrapper .nosotros-info-container-2 .nosotros-info-contenido-2 {
+      padding-left: 70px;
+      margin-left: 100px; }
+      .nosotros-info-container-2-wrapper .nosotros-info-container-2 .nosotros-info-contenido-2 p {
+        font-size: 24px; }
+    .nosotros-info-container-2-wrapper .nosotros-info-container-2 .nosotros-info-image-2 figure > img {
+      border-radius: 5px;
+      height: 500px; }
+
+.nosotros-info-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 70px 50px 70px; }
+  .nosotros-info-2 .nosotros-info-container-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px; }
+    .nosotros-info-2 .nosotros-info-container-2 .nosotros-info-container-2-contenido {
+      width: 70%; }
+      .nosotros-info-2 .nosotros-info-container-2 .nosotros-info-container-2-contenido h2 {
+        font-size: 40px;
+        padding-bottom: 20px; }
+      .nosotros-info-2 .nosotros-info-container-2 .nosotros-info-container-2-contenido p {
+        font-size: 22px; }
+      .nosotros-info-2 .nosotros-info-container-2 .nosotros-info-container-2-contenido h3 {
+        font-size: 27px;
+        padding-top: 30px;
+        color: #48c8fa; }
+  .nosotros-info-2 .nosotros-image-container-2 {
+    padding-right: 70px; }
+    .nosotros-info-2 .nosotros-image-container-2 article > img {
+      height: 470px; }
+
+.servicios-banner-inicial .servicios-banner-inicial-blur {
+  backdrop-filter: blur(2px);
+  background-color: rgba(153, 231, 245, 0.3);
+  padding: 200px 0 200px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .servicios-banner-inicial .servicios-banner-inicial-blur .servicios-banner-inicial-container {
     color: white;
     text-align: center;
-    backdrop-filter: blur(2px); }
-    .nosotrosBanner1 .nosotrosBanner1Container h1 {
+    max-width: 500px; }
+    .servicios-banner-inicial .servicios-banner-inicial-blur .servicios-banner-inicial-container h2 {
       font-size: 40px;
       padding-bottom: 30px; }
-    .nosotrosBanner1 .nosotrosBanner1Container p {
-      font-size: 25px; }
 
-.nosotrosBanner2 .nosotrosContainer1 {
-  display: flex;
-  justify-content: space-around;
-  align-items: center; }
-  .nosotrosBanner2 .nosotrosContainer1 .nosotrosContenido1 {
-    padding-top: 100px;
-    padding-left: 20px; }
-    .nosotrosBanner2 .nosotrosContainer1 .nosotrosContenido1 p {
-      font-size: 23px; }
-  .nosotrosBanner2 .nosotrosContainer1 .nosotrosImg img {
-    height: 600px; }
-
-.nosotrosBanner2 .nosotrosContainer2 {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row-reverse; }
-  .nosotrosBanner2 .nosotrosContainer2 .nosotrosContenido2 {
-    padding-right: 30px;
-    align-items: center; }
-    .nosotrosBanner2 .nosotrosContainer2 .nosotrosContenido2 p {
-      font-size: 23px;
-      text-align: right; }
-  .nosotrosBanner2 .nosotrosContainer2 .nosotrosImg img {
-    height: 600px; }
-
-.nosotrosBanner3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.servicios-banner-inicial h1 {
+  font-size: 35px;
+  text-align: center;
+  color: white;
   padding-top: 50px;
   padding-bottom: 50px; }
-  .nosotrosBanner3 .nosotrosBanner3Contenido {
-    padding-left: 10px; }
-    .nosotrosBanner3 .nosotrosBanner3Contenido h2 {
-      font-size: 50px;
-      padding-bottom: 20px; }
-    .nosotrosBanner3 .nosotrosBanner3Contenido p {
-      font-size: 22px; }
-    .nosotrosBanner3 .nosotrosBanner3Contenido h3 {
-      font-size: 27px;
-      padding-top: 30px;
-      color: #8ddcfc; }
-  .nosotrosBanner3 .nosotrosBanner3Img {
-    display: block; }
 
-.serviciosBanner1 {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-image: url(../assets/serviciosBanner1.jpg);
-  background-position: top;
-  background-size: 1700px;
-  background-attachment: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .serviciosBanner1 h1 {
-    font-size: 35px;
-    text-align: center;
-    color: white;
-    padding-top: 50px;
-    padding-bottom: 50px; }
+.servicios-banner-cards {
+  margin-top: 500px; }
+  .servicios-banner-cards h2 {
+    font-size: 45px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 150px; }
 
-.serviciosBanner2 h2 {
-  font-size: 45px;
-  color: black;
-  display: flex;
-  justify-content: center;
-  padding-top: 100px;
-  padding-bottom: 150px; }
-
-.cardContainer2 {
+.servicios-banner-cards-container-cards {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 70px;
   padding-bottom: 50px;
   flex-wrap: wrap; }
-  .cardContainer2 .card .cardImg {
-    width: 289px;
-    border-radius: 7px;
-    background-color: white;
-    box-shadow: 6px 4px 12px -3px rgba(94, 94, 94, 0.87);
-    display: flex;
-    justify-content: center;
+  .servicios-banner-cards-container-cards .inicio-servicios-card {
+    max-width: 300px;
+    background-color: #f7f7f8;
+    padding: 15px;
+    padding-block: 15px;
     align-items: center;
-    z-index: 1; }
-    .cardContainer2 .card .cardImg img {
-      height: 200px;
-      z-index: 1; }
-    .cardContainer2 .card .cardImg:hover {
-      transform: translate(0px, -150px);
-      box-shadow: 6px 4px 12px -3px rgba(140, 247, 255, 0.87);
-      transition: 0.7s ease-in-out; }
-  .cardContainer2 .card .cardContenido {
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    z-index: -1;
+    overflow: hidden;
     position: relative;
-    top: -135px; }
-    .cardContainer2 .card .cardContenido p {
-      font-size: 22px;
-      padding-top: 5px;
-      text-align: center; }
+    transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 0 #00000026; }
+    .servicios-banner-cards-container-cards .inicio-servicios-card > :not(strong) {
+      transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease; }
+    .servicios-banner-cards-container-cards .inicio-servicios-card strong {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--hover-text);
+      border-radius: 5px;
+      font-weight: bold;
+      top: 100%;
+      transition: all 0.3s cubic-bezier(0.6, 0.4, 0, 1); }
+    .servicios-banner-cards-container-cards .inicio-servicios-card .card-image {
+      width: 300px;
+      transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
+      background-color: #f7f7f8;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .servicios-banner-cards-container-cards .inicio-servicios-card .card-image img {
+        height: 200px; }
+    .servicios-banner-cards-container-cards .inicio-servicios-card:hover .card-image {
+      transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease;
+      background-color: rgba(138, 204, 221, 0.801);
+      opacity: 0; }
+    .servicios-banner-cards-container-cards .inicio-servicios-card:hover strong {
+      top: 0;
+      font-size: 25px;
+      color: white; }
+    .servicios-banner-cards-container-cards .inicio-servicios-card:hover {
+      background-color: rgba(138, 204, 221, 0.801);
+      box-shadow: 0 5px 5px 0 #00000026; }
 
 .bannerClientes1 {
   padding-top: 100px;
@@ -463,7 +573,7 @@ footer {
       color: white;
       border-radius: 5px; }
       .bannerClientes3 .botonClientesContainer a:hover {
-        font-size: 25px;
+        transform: scale(25px);
         color: black;
         transition: 0.4s ease-in-out; }
 
@@ -526,9 +636,12 @@ footer {
   header .navBar {
     padding-right: 10px; }
     header .navBar ul li a {
-      font-size: 19px; }
+      font-size: 20px;
+      transition: 0.2s all cubic-bezier(0.4, 0, 0.2, 1); }
       header .navBar ul li a:hover {
-        font-size: 21px; }
+        transform: scale(1.1);
+        color: white;
+        transition: 0.4s all cubic-bezier(0.4, 0, 0.2, 1); }
   header .logo a img {
     padding-top: 10px;
     height: 140px; }
@@ -645,16 +758,16 @@ footer {
     font-size: 30px; } }
 
 @media (max-width: 680px) {
-  header .hamburger {
-    display: block;
+  .header-inicial .hamburger {
+    display: flex;
+    flex-direction: column;
     cursor: pointer;
     padding-right: 10px; }
-    header .hamburger .line {
-      width: 30px;
-      height: 3px;
-      background-color: black;
-      margin: 6px 0; }
-  header .navBar {
+    .header-inicial .hamburger .line {
+      border: 2px black solid;
+      width: 35px;
+      margin: 3px 0; }
+  .header-inicial .navBar {
     height: 0px;
     position: absolute;
     top: 100px;
@@ -669,18 +782,24 @@ footer {
     align-items: center;
     overflow: hidden;
     z-index: 1; }
-    header .navBar ul {
+    .header-inicial .navBar ul {
       opacity: 0; }
-      header .navBar ul li a {
+      .header-inicial .navBar ul li a {
         padding-left: 40px;
         align-items: center;
         flex-direction: column;
         font-size: 19px; }
-  header .navBar.active {
+  .header-inicial .navBar.active {
     height: 450px; }
-    header .navBar.active ul {
-      opacity: 1; }
-  header .logo a img {
+    .header-inicial .navBar.active ul {
+      opacity: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center; }
+      .header-inicial .navBar.active ul li {
+        display: inline-block; }
+  .header-inicial .logo a img {
     padding-top: 10px;
     height: 130px; }
   .bannerInicio1 h1 {
